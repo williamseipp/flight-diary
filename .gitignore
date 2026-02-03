@@ -1,1 +1,3 @@
-node_modules\nbuild\ndist
+node_modules/
+nbuild/
+dist/
