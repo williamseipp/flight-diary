@@ -1,11 +1,12 @@
+import { Response } from 'express';
 import express from 'express';
 
 import diaryService from '../services/diaryService';
+import { NonSensitiveDiaryEntry } from '../types.js';
 
 const router = express.Router();
 
-router.get('/', (_req, res) => {
-
+router.get('/', (_req, res: Response<NonSensitiveDiaryEntry[]>) => {
 	res.send(diaryService.getNonSensitiveEntries());
 });
 
